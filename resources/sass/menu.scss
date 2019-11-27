@@ -1,0 +1,105 @@
+nav{
+    .navbar-brand{
+        img{
+            width: 100%;
+        }
+    }
+    .text{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        ul{
+            width: 90%;
+            li{
+
+                a{
+                    color: black !important;
+                    display: block;
+                }
+
+            }
+            .linkMenu{
+                margin: 0px 15px;
+            }
+            .login{
+                margin-left: 50px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .avata-after-login{
+                    display: none;
+                }
+                .iconUser{
+                    padding: 10px;
+                    margin: 0px 10px;
+                    border: 1px solid #333;
+                    border-radius: 50%;
+                    box-sizing: border-box;
+                    width: 45px;
+                    height: 45px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    i{
+                        color: #333;
+
+                    }
+                    a{
+                        background: none !important;
+                    }
+                }
+                a{
+                    width: 198px;
+                    height: 47px;
+                    background: #297FB8;
+                    border-radius: 64px;
+                    color: white !important;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    span{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 480px){
+    #some-element { display: none; }
+    ul{
+        padding-inline-start: 0px !important;
+    }
+    .navbar-nav{
+        width: 99%;
+        li{
+            color: white;
+        }
+    }
+    .navbar-dark .navbar-nav .nav-link{
+
+    }
+    .menu{
+        color: black;
+    }
+    .logo{
+        img{
+            transform: scale(0.7)
+        }
+    }
+    .linkMenu{
+        margin: 0px !important;
+    }
+
+    ul{
+        .login{
+            margin-left: 0px !important;
+            .iconUser{
+                margin: 0px !important;
+            }
+        }
+    }
+}

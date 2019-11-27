@@ -1,0 +1,11 @@
+*{
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    font-size: 12px;
+}
+ul{
+    padding-inline-start: 0px;
+}

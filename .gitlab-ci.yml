@@ -1,0 +1,47 @@
+stages:
+  - CheckPhpcs
+  - DeployTest
+
+.PhpcsScan: &PhpcsScan |
+  pushComment(){
+      curl --request POST --header "PRIVATE-TOKEN: $USER_TOKEN" \
+      --form "note=$OUTPUT" --form "path=dudeism.md" \
+      --form "line=1" --form "line_type=new" \
+      https://gitlab.com/api/v4/projects/$CI_PROJECT_ID/repository/commits/$CI_COMMIT_SHA/comments
+      echo $OUTPUT
+      exit 1
+  }
+
+  OUTPUT=$(phpcs --standard=PSR2 app) || pushComment
+
+CheckPhpcs:
+  stage: CheckPhpcs
+  image: composer
+  script:
+    - curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar && curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar
+    - mv phpcs.phar /usr/local/bin/phpcs && chmod +x /usr/local/bin/phpcs
+    - mv phpcbf.phar /usr/local/bin/phpcbf && chmod +x /usr/local/bin/phpcbf
+    - *PhpcsScan
+
+heroku:
+  stage: DeployTest
+  image: composer
+  variables:
+    APP_NAME: memolas-staging
+    HEROKU_API_KEY: $HEROKU_STAGING_API_KEY
+  only:
+    - develop@thuhue/memolasserver
+  script:
+    - apk add ruby ruby-dev ruby-irb ruby-rake ruby-io-console ruby-bigdecimal ruby-json ruby-bundler yarn ruby-rdoc >> /dev/null
+    - apk update
+    - gem install dpl >> /dev/null
+    - dpl --provider=heroku --app=$APP_NAME --api-key=$HEROKU_API_KEY
+    - yarn global add heroku@$HEROKU_CLI_VERSION
+#    - composer install
+#    - php artisan ckfinder:download
+    - heroku run php artisan migrate --force --exit-code --app $APP_NAME
+    - heroku run php artisan db:seed --force --exit-code --app $APP_NAME
+    - heroku run php artisan cache:clear --exit-code --app $APP_NAME
+    - heroku run php artisan view:clear --exit-code --app $APP_NAME
+    - heroku run php artisan route:clear --exit-code --app $APP_NAME
+    - heroku run php artisan config:cache --exit-code --app $APP_NAME

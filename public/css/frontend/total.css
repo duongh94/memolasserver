@@ -1,0 +1,221 @@
+.price .header h3 {
+  text-align: center; }
+.price .header ul li {
+  margin: 30px 0px; }
+.price .content h3 {
+  font-weight: bold;
+  font-size: 18px; }
+.price .content .text {
+  display: flex;
+  justify-content: space-between; }
+.price .content .page-defaut {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between; }
+.price .content input[type="range"] {
+  outline: 0;
+  border: 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 12px 0;
+  height: 20px; }
+.price .content input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  color: #444;
+  margin-top: -1px;
+  transition: box-shadow 0.2s ease-in-out;
+  height: 20px; }
+.price .content input[type="range"]::-webkit-slider-thumb {
+  width: 26px;
+  -webkit-appearance: none;
+  height: 2px;
+  cursor: ew-resize;
+  background: #68c0ff;
+  border: 1px solid #ffc692;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  transition: box-shadow 0.2s ease-in-out;
+  position: relative; }
+.price .content input[type="range"]::-moz-range-thumb {
+  width: 26px;
+  -webkit-appearance: none;
+  height: 22px;
+  cursor: ew-resize;
+  background: #68c0ff;
+  border: 1px solid #ffc692;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  transition: box-shadow 0.2s ease-in-out;
+  position: relative; }
+.price .content input[type="range"]::-ms-thumb {
+  width: 26px;
+  -webkit-appearance: none;
+  height: 22px;
+  cursor: ew-resize;
+  background: #68c0ff;
+  border: 1px solid #ffc692;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  transition: box-shadow 0.2s ease-in-out;
+  position: relative; }
+.price .content input[type="range"]::-moz-range-progress {
+  height: 20px;
+  background: #68c0ff;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 2px; }
+.price .content input[type="range"]::-moz-range-track {
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  height: 20px; }
+.price .content input[type="range"]::-ms-fill-lower {
+  background: #68c0ff;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  height: 20px; }
+.price .content input[type="range"]::-ms-fill-upper {
+  background: #68c0ff;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  height: 20px; }
+.price .content .nav-link {
+  font-size: 16px; }
+.price .content .tab-content input {
+  background: #ffffff;
+  border: 1px solid #e1e1e1;
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 40px;
+  width: 100%;
+  margin: 7px 0px;
+  padding: 12px; }
+  .price .content .tab-content input:focus {
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
+    background: #ffab5e; }
+.price .content .tab-content .ngang {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+.price .content .tab-content a {
+  margin: 7px 0px;
+  display: inline-block;
+  background: #3a78ff;
+  border-radius: 4px;
+  padding: 10px 15px;
+  color: white !important; }
+.price .content .check-group {
+  max-width: 100%;
+  position: relative;
+  font-size: 15px;
+  display: flex; }
+.price .content .radiobtn {
+  position: relative;
+  display: block;
+  width: 200px; }
+  .price .content .radiobtn label {
+    display: block;
+    background: #d3e1ff;
+    color: #444;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: 2px solid #a0beff;
+    margin-bottom: 5px;
+    cursor: pointer; }
+    .price .content .radiobtn label:after, .price .content .radiobtn label:before {
+      content: "";
+      position: absolute;
+      right: 11px;
+      top: 11px;
+      width: 20px;
+      height: 20px;
+      border-radius: 3px;
+      background: #87acff; }
+    .price .content .radiobtn label:before {
+      background: transparent;
+      transition: 0.1s width cubic-bezier(0.075, 0.82, 0.165, 1) 0s, 0.3s height cubic-bezier(0.075, 0.82, 0.165, 2) 0.1s;
+      z-index: 2;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-size: 13px;
+      background-position: center;
+      width: 0;
+      height: 0;
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNS4zIDEzLjIiPiAgPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTE0LjcuOGwtLjQtLjRhMS43IDEuNyAwIDAgMC0yLjMuMUw1LjIgOC4yIDMgNi40YTEuNyAxLjcgMCAwIDAtMi4zLjFMLjQgN2ExLjcgMS43IDAgMCAwIC4xIDIuM2wzLjggMy41YTEuNyAxLjcgMCAwIDAgMi40LS4xTDE1IDMuMWExLjcgMS43IDAgMCAwLS4yLTIuM3oiIGRhdGEtbmFtZT0iUGZhZCA0Ii8+PC9zdmc+); }
+  .price .content .radiobtn .radio {
+    display: none;
+    position: absolute;
+    width: 100%;
+    appearance: none; }
+    .price .content .radiobtn .radio:checked + label {
+      background: #87acff;
+      animation-name: blink;
+      animation-duration: 1s;
+      border-color: #3a78ff; }
+      .price .content .radiobtn .radio:checked + label:after {
+        background: #3a78ff; }
+      .price .content .radiobtn .radio:checked + label:before {
+        width: 20px;
+        height: 20px; }
+@keyframes blink {
+  0% {
+    background-color: #87acff; }
+  10% {
+    background-color: #87acff; }
+  11% {
+    background-color: #a0beff; }
+  29% {
+    background-color: #a0beff; }
+  30% {
+    background-color: #87acff; }
+  50% {
+    background-color: #a0beff; }
+  45% {
+    background-color: #87acff; }
+  50% {
+    background-color: #a0beff; }
+  100% {
+    background-color: #87acff; } }
+.price .content .list {
+  margin: 15px 0px; }
+  .price .content .list li {
+    list-style: none;
+    margin: 10px 0px; }
+    .price .content .list li::before {
+      content: "\2022";
+      margin-right: 1em;
+      color: #3a78ff; }
+.price .total .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+.price .total a {
+  width: 100%;
+  height: 49px;
+  background: #2980B9;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  display: block;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 49px; }
+.price .total .box {
+  width: 100%;
+  margin: 10px 0px;
+  padding: 5px;
+  border: 1px solid lightgray; }
+  .price .total .box:focus {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2); }
+.price .total #pass-json {
+  background: #2980B9;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  border: none;
+  width: 100%;
+  padding: 10px 0px;
+  color: white; }
+
+/*# sourceMappingURL=total.css.map */

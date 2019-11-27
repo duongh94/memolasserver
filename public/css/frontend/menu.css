@@ -1,0 +1,77 @@
+nav {
+  width: 100vw; }
+  nav .navbar-brand img {
+    width: 100%; }
+  nav .text {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    nav .text ul {
+      width: 90%; }
+      nav .text ul li a {
+        color: black !important;
+        display: block; }
+      nav .text ul .linkMenu {
+        margin: 0px 15px; }
+      nav .text ul .login {
+        margin-left: 300px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        nav .text ul .login .avata-after-login {
+          display: none; }
+        nav .text ul .login .iconUser {
+          padding: 10px;
+          margin: 0px 10px;
+          border: 1px solid #333;
+          border-radius: 50%;
+          box-sizing: border-box;
+          width: 45px;
+          height: 45px;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          nav .text ul .login .iconUser i {
+            color: #333; }
+          nav .text ul .login .iconUser a {
+            background: none !important; }
+        nav .text ul .login a {
+          width: 108px;
+          height: 47px;
+          background: #297FB8;
+          border-radius: 64px;
+          color: white !important;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          nav .text ul .login a span {
+            color: black; }
+
+@media only screen and (max-width: 480px) {
+  #some-element {
+    display: none; }
+
+  ul {
+    padding-inline-start: 0px !important; }
+
+  .navbar-nav {
+    width: 99%; }
+    .navbar-nav li {
+      color: white; }
+
+  .menu {
+    color: black; }
+
+  .logo img {
+    transform: scale(0.7); }
+
+  .linkMenu {
+    margin: 0px !important; }
+
+  ul .login {
+    margin-left: 0px !important; }
+    ul .login .iconUser {
+      margin: 0px !important; } }
+
+/*# sourceMappingURL=menu.css.map */
